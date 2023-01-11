@@ -2,8 +2,9 @@
 def best_score(a_dictionary):
     if not isinstance(a_dictionary, dict) or a_dictionary is None:
         return None
-    max_value = max(a_dictionary.values())
+    new_key = list(a_dictionary.keys())[0]
+    value = a_dictionary[new_key]
     for key in a_dictionary:
-        if a_dictionary[key] == max_value:
-            return key
-    return None
+        if a_dictionary[key] >= value:
+            new_key = key
+    return new_key
