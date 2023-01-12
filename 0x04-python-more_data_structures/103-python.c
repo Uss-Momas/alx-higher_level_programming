@@ -33,9 +33,9 @@ void print_python_bytes(PyObject *p)
 	unsigned int i;
 
 	b = (PyBytesObject *) p;
+	printf("[.] bytes object info\n");
 	if (b && PyBytes_Check(b))
 	{
-		printf("[.] bytes object info\n");
 		printf("  size: %ld\n", b->ob_base.ob_size);
 		printf("  trying string: %s\n", b->ob_sval);
 		if (b->ob_base.ob_size + 1 <= 10)
