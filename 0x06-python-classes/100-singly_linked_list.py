@@ -10,12 +10,12 @@ class Node:
 
     @property
     def data(self):
-        """Getter to the att data"""
+        """Getter to the attribute data"""
         return self.__data
 
     @data.setter
     def data(self, value):
-        """Setter to the att data"""
+        """Setter to the attribute data"""
         if type(value) is not int:
             raise TypeError("data must be an integer")
         else:
@@ -40,31 +40,30 @@ class SinglyLinkedList:
 
     def __init__(self):
         """Initialize the list
-
-            args:
-                head (Node): the first Node of the list
+        args:
+            head (Node): the first Node of the list
         """
         self.__head = None
 
     def __str__(self):
-        """The representation of the class"""
+        """The representation of the class as string"""
         temp = self.__head
-        str = ""
+        string = ""
         if temp is None:
             # list is empty
             return ""
         while temp is not None:
             if temp.next_node is None:
                 break
-            str += "{}\n".format(temp.data)
+            string += "{}\n".format(temp.data)
             temp = temp.next_node
-        str += "{}".format(temp.data)
-        return str
+        string += "{}".format(temp.data)
+        return string
 
     def sorted_insert(self, value):
         """Inserts a new node in the right order
-            args:
-                value (int): is the data to be introduced
+        args:
+            value (int): is the data to be introduced
         """
         if self.__head is None:
             # list is empty
