@@ -1,13 +1,8 @@
-#!/usr/bin/python
-
-"""0-square module  containing the class module
-and it's attributes and methods
-and also other functions
-"""
+#!/usr/bin/python3
+""" Square module """
 
 
 class Square:
-    """This class is the responsable to create an object of a square
-    """
+    """ Declares a square class """
 
     pass
