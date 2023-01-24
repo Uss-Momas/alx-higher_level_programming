@@ -1,5 +1,10 @@
 #!/usr/bin/python
-""" Square module """
+
+"""
+    0-square module  containing the class module
+    and it's attributes and methods
+    and also other functions
+"""
 
 
 class Square:
@@ -15,4 +20,5 @@ class Square:
     Todo:
         nothing
     """
+
     pass
