@@ -1,0 +1,35 @@
+============================
+How to use 0-add_integer.py
+============================
+
+This library is very easy, since it has one function called
+``add_integer()``
+
+Numbers
+=======
+
+``add_integer()`` returns the addiction of its arguments. For numbers
+the value is equivalent to using the ``+`` operator.
+
+::
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+checking for module docstring
+::
+        >>> mod_string = __import__("0-add_integer").__doc__
+        >>> len(mod_string) > 5
+        True
+
+checking for function docstring
+::
+        >>> fun_docs = add_integer.__doc__
+        >>> len(fun_docs) > 5
+        True
+
+
+checking addition of positive integer
+::
+        >>> add_integer(3, 2)
+        5
+        >>> add_integer(20000, 40000)
+        60000
