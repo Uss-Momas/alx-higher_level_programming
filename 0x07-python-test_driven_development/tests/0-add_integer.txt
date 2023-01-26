@@ -33,3 +33,50 @@ checking addition of positive integer
         5
         >>> add_integer(20000, 40000)
         60000
+
+
+checking addition of negative numbers
+::
+	>>> add_integer(-1000, -2000)
+	-3000
+	>>> add_integer(-1, -1)
+	-2
+	>>> add_integer(-1)
+	97
+
+
+checking addition of float numbers
+::
+	>>> add_integer(0.2, 3.7)
+	3
+	>>> add_integer(1.6, 200.1)
+	201
+
+
+Non-Numbers
+============
+
+checking the addition of strings
+
+	>>> add_integer('a', 0)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	>>> add_integer(100, '10')
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+	>>> add_integer('20', '30')
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+
+
+Checking iterables/sequences addition
+
+::
+	>>> add_integer([1, 2], 100)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
