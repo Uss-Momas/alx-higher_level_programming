@@ -1,0 +1,36 @@
+===============================
+3-say_my_name Module test cases
+===============================
+
+
+:: importing the module 3-say_my_name
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+
+:: test case with non string parameters
+
+	>>> say_my_name(1, "uss")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	>>> say_my_name("Ussumane", 1)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+	>>> say_my_name(1, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+:: test case with string parameters
+	>>> say_my_name("Ussumane", "Momade")
+	My name is Ussumane Momade
+	>>> say_my_name("Dúlia")
+	My name is Dúlia 
+
+	>>> say_my_name("")
+	My name is  
