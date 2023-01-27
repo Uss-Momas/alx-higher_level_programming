@@ -1,0 +1,64 @@
+=============================================
+Testing cases for the 2-matrix_divided module
+=============================================
+
+============
+NUMBERS
+============
+
+:: Importing the module 2-matrix_divided and the function matrix_divided
+
+::
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>>
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix
+	[[1, 2, 3], [4, 5, 6]]
+
+
+:: Use case for integers numbers
+::
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+:: Use case for integers and float's numbers
+::
+	>>> matrix = [[1.5, 2, 3], [4.5, 5, 6]]
+	>>> matrix_divided(matrix, 3)
+	[[0.5, 0.67, 1.0], [1.5, 1.67, 2.0]]
+
+:: Use case for negative numbers
+::
+	>>> matrix = [[-1.5, -2, 3], [-4.5, -5, 6]]
+	>>> matrix_divided(matrix, -3)
+	[[0.5, 0.67, -1.0], [1.5, 1.67, -2.0]]
+
+===========================
+NON_NUMBERS
+===========================
+
+:: Use case for different lengths of rows
+::
+	>>> matrix = [[1, 2, 3], [4, 5, 6, 7]]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: Each row of the matrix must have the same size
+
+
+:: Use case for strings
+::
+	>>> matrix = [[1, 2, 3], ['as', '9', 6]]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/float
+
+Use case for divion by zero
+::
+	>>> matrix = [[1, 0, 3], [0, 21, 6]]
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
