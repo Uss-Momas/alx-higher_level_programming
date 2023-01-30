@@ -24,6 +24,9 @@ class Rectangle:
         Returns the rectangle string representation
         """
         rect = ""
+        if self.__width != 0 and self.__height != 0:
+            return ""
+
         for hei in range(self.__height):
             for wid in range(self.__width):
                 rect += "#"
