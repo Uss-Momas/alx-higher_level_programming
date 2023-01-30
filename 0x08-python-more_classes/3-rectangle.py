@@ -19,6 +19,18 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        """Especial method __str__
+        Returns the rectangle string representation
+        """
+        rect = ""
+        for hei in range(self.__height):
+            for wid in range(self.__width):
+                rect += "#"
+            if hei != self.__height - 1:
+                rect += "\n"
+        return rect
+
     @property
     def width(self):
         """Getter method for private instance width"""
