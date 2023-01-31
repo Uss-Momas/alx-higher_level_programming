@@ -1,0 +1,85 @@
+===================================
+TESTING THE MODULE TEXT_INDENTATION
+===================================
+
+:#: Importing the text_indentation module
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+
+:#: Testing in case the parameter is not String
+
+>>> text_indentation(100)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+:#: Testing with possible strings
+
+>>> text = "Test: text, is working? maybe"
+>>> text_indentation(text)
+Test:
+<BLANKLINE>
+text, is working?
+<BLANKLINE>
+maybe
+
+>>> text = "This is a text. Provided by the owner of the program: Ussumane Momade?"
+>>> text_indentation(text)
+This is a text.
+<BLANKLINE>
+Provided by the owner of the program:
+<BLANKLINE>
+Ussumane Momade?
+<BLANKLINE>
+
+
+:#: Checking the module docstring
+
+>>> Mdocs = __import__("5-text_indentation").__doc__
+>>> len(Mdocs) > 5
+True
+
+:#: Checking function docstrings
+
+>>> Fdocs = text_indentation.__doc__
+>>> len(Fdocs) > 5
+True
+
+
+:#: Checking spaces in the beggining
+>>> text = "   Hello.  How are you?   "
+>>> text_indentation(text)
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+
+
+:#: checking only the ['.', '?', ':']
+
+>>> text_indentation("      .?:       ")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+
+>>> text_indentation("\t \t   \t      ? \t\t. \t\t\t ? \t        :      \t \t \t")
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+
+:#: checking simple text
+
+>>> text_indentation("Hello")
+Hello

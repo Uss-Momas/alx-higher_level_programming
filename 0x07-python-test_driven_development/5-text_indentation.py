@@ -20,29 +20,21 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-
-    new_text = ""
     lines = []
+    line = ""
     for char in text:
         if char in ['.', '?', ':']:
-            new_text += "?"
-        else:
-            new_text += char
-    new_text += "?"
-    line = ""
-    i = 0
-    for char in new_text:
-        if char != '?':
             line += char
-        else:
-            if i != len(new_text) - 1:
-                line += "\n\n"
             lines.append(line)
             line = ""
-        i += 1
+            continue
+        line += char
+    lines.append(line)
 
-    for line in lines:
-        for i in range(len(line)):
-            if i == 0 and line[i] == " ":
-                continue
-            print(line[i], end="")
+    last_line_idx = len(lines) - 1
+    for i in range(len(lines)):
+        if i != last_line_idx:
+            print(lines[i].strip())
+            print()
+            continue
+        print(lines[i].strip(), end="")
