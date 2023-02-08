@@ -5,10 +5,13 @@
 
 def add_atribute(obj, objname, value):
     """ Adds atribute to object class
+    Args:
+        obj: the object
+        objname: object name
+        value: the value to be added
     """
 
     if hasattr(obj, "__dict__") is False:
         raise TypeError("can't add new attribute")
 
     setattr(obj, objname, value)
-
