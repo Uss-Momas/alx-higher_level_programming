@@ -1,0 +1,34 @@
+================================
+TESTS FOR BASE GEOMETRY MODULE
+================================
+
+IMPORTING THE MODULE
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Testing Verifying the area method
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+TESTING THE VALUE INPUT
+
+>>> bg.integer_validator("Uss", "89")
+Traceback (most recent call last):
+...
+TypeError: Uss must be an integer
+
+>>> bg.integer_validator("list", [1, 2, 4])
+Traceback (most recent call last):
+...
+TypeError: list must be an integer
+
+TESTING NEGATIVE VALUES
+
+>>> bg.integer_validator("width", -1)
+Traceback (most recent call last):
+...
+ValueError: width must be greater than 0
