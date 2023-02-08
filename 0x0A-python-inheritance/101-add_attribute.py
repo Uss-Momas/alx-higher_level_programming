@@ -3,7 +3,7 @@
 """
 
 
-def add_atribute(obj, objname, value):
+def add_attribute(obj, objname, value):
     """ Adds atribute to object class
     Args:
         obj: the object
