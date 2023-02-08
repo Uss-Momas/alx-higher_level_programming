@@ -1,0 +1,50 @@
+=======================
+TESTING MODULE Mylist
+=======================
+
+1. FIRST LET'S IMPORT OUR MODULE CLASS
+
+>>> MyList = __import__("1-my_list").MyList
+
+2. Creating the list by using the MyList module
+
+>>> a = MyList()
+
+3. Adding elements to the list instance created
+
+>>> a.append(5)
+>>> a.append(3)
+>>> a.append(7)
+
+4. Printing the list to the shell
+>>> a
+[5, 3, 7]
+
+5. TEST 1: CHECKING THE SORTED FUNCTION
+
+>>> a.print_sorted()
+[3, 5, 7]
+
+6. TEST 2: CHECKING CLASS INITIALIZATION PARAMS
+>>> a = [-1, -2, -3, -5, -10]
+>>> b = MyList(a)
+Traceback (most recent call last):
+...
+TypeError: __init__() takes 1 positional argument but 2 were given
+>>> b
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
+
+
+7. TEST 3: TESTING WITH 0's and NEGATIVE NUMBERS
+>>> b = MyList()
+>>> b.append(-1)
+>>> b.append(-10)
+>>> b.append(-5)
+>>> b.append(-34)
+>>> b.append(0)
+>>> b.print_sorted()
+[-34, -10, -5, -1, 0]
+>>> b
+[-1, -10, -5, -34, 0]
