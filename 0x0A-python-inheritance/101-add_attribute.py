@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" add attribute Module
+"""
+
 
 def add_atribute(obj, objname, value):
     """ Adds atribute to object class
