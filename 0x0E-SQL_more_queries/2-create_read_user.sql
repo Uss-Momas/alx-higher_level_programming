@@ -3,7 +3,7 @@
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
 -- Creating user
-CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED 'user_0d_2_pwd';
+CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
 FLUSH PRIVILEGES;
 
 -- granting privileges
