@@ -2,23 +2,19 @@
 
 const argv = process.argv;
 const len = argv.length;
-let max = 0;
-let second = 0;
+let array = [];
 let number = 0;
+let second;
 
 if (len <= 3) {
   console.log('0');
-} else {
-  max = Number(argv[2]);
-  second = Number(argv[3]);
+}
+else {
   for (let i = 2; i < len; i++) {
     number = parseInt(Number(argv[i]));
-    if (number >= max) {
-      second = max;
-      max = number;
-    } else if (number >= second) {
-      second = number;
-    }
+    array.push(number);
   }
+  array = array.sort((a, b) =>  a - b);
+  second = array[array.length - 2];
   console.log(second);
 }
