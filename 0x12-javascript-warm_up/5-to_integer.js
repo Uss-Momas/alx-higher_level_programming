@@ -1,9 +1,3 @@
-#!/usr/bin/env node
-const process = require('process');
-const integer = parseInt(Number(process.argv[2]));
+#!/usr/bin/node
 
-if (!isNaN(integer)) {
-  console.log('My number: ' + integer);
-} else {
-  console.log('Not a number');
-}
+const process = require('process');
