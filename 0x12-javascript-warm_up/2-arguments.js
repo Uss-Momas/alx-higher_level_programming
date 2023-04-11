@@ -1,8 +1,15 @@
 #!/usr/bin/node
+// after including package.json { type: "module"}
+// form 1 of importing: import { argv } from 'node:process';
+// form 2 of importing process, delete the package.json
 
-import { argv } from 'node:process';
+const process = require('process');
+const argv = process.argv;
 
-// print process.argv
-argv.forEach((val, index) => {
-  console.log(`${index}: ${val}`);
-});
+if (argv.length === 2) {
+  console.log('No argument');
+} else if (argv.length === 3) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
+}
