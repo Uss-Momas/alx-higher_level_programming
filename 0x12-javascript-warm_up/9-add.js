@@ -2,9 +2,8 @@
 
 const process = require('process');
 const argv = process.argv;
-const integer = Number(argv[2]);
 
-function add(a, b) {
+function add (a, b) {
   return (a + b);
 }
 
