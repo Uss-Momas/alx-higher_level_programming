@@ -6,8 +6,8 @@ let max = 0;
 let second = 0;
 let number = 0;
 
-if (argv.length === 2 || argv.length === 3) {
-  console.log(0);
+if (len <= 3) {
+  console.log('0');
 } else {
   max = Number(argv[2]);
   second = Number(argv[3]);
