@@ -2,13 +2,14 @@
 
 const dict = require('./101-data.js').dict;
 const newDict = {};
-const list = [];
 
-console.log(dict);
-for (const key in dict) {
-  // console.log(`${key}: ${dict[key]}`);
-  list.push(key);
-  newDict[dict[key]] = list;
+for (const [key, value] of Object.entries(dict)) {
+  // console.log(`${key}: ${value}`);
+  if (typeof newDict[value] === 'undefined') {
+    newDict[value] = [key];
+  } else {
+    newDict[value].push(key);
+  }
 }
 
 console.log(newDict);
