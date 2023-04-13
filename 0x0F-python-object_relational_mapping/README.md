@@ -1,6 +1,9 @@
 # Python - Object Relational Mapping
 
 ## Resources
+
+- Important concepts needed to grasp about python-database connections and ORMs 
+
 1. [Object-relational mappers](https://www.fullstackpython.com/object-relational-mappers-orms.html)
 2. [mysqlclient/MySQLdb documentation (please don’t pay attention to _mysql)](https://mysqlclient.readthedocs.io)
 3. [MySQLdb tutorial](https://www.mikusa.com/python-mysql-docs/index.html)
