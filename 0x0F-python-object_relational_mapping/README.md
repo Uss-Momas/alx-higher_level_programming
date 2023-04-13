@@ -16,3 +16,13 @@
 11. [Python SQLAlchemy Cheatsheet](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
 12. [SQLAlchemy ORM Tutorial for Python Developers (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
 13. [SQLAlchemy Tutorial](https://overiq.com/sqlalchemy-101/)
+
+## Learning objectives
+
+### General
+* Why Python programming is awesome
+* How to connect to a MySQL database from a Python script
+* How to SELECT rows in a MySQL table from a Python script
+* How to INSERT rows in a MySQL table from a Python script
+* What ORM means
+* How to map a Python Class to a MySQL table
