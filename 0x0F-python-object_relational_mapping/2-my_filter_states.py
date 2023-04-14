@@ -17,13 +17,13 @@ if __name__ == '__main__':
 
     st_name = argv[4]
     cur = conection.cursor()
-    print("SELECT * FROM states WHERE name='{}' ORDER BY id".format(st_name))
     cur.execute(
             "SELECT * FROM states WHERE name='{}' ORDER BY id ASC"
             .format(st_name)
             )
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        if row[1] == st_name:
+            print(row)
     cur.close()
     conection.close()
