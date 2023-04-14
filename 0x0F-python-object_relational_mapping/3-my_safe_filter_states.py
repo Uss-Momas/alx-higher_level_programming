@@ -17,7 +17,6 @@ if __name__ == '__main__':
             )
 
     state_name_searched = argv[4]
-    print(state_name_searched)
     cur = con.cursor()
     cur.execute(
             "SELECT * FROM states WHERE name = %s ORDER BY id ASC",
