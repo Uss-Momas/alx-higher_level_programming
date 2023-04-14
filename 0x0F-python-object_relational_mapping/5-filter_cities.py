@@ -14,14 +14,9 @@ def print_row(table):
     Args:
         -table: the query rows result
     """
-    size = len(table)
-    i = 0
-    for row in table:
-        if i != size - 1:
-            print(row[0], end=", ")
-        else:
-            print(row[0])
-        i += 1
+    list = [city[0] for city in table]
+    result = ', '.join(list)
+    print(result)
 
 
 if __name__ == "__main__":
@@ -42,7 +37,6 @@ if __name__ == "__main__":
             """, (state_name,)
             )
     query_rows = cur.fetchall()
-    # print_row(query_rows)
-    print(", ".join(city[0] for city in query_rows))
+    print_row(query_rows)
     cur.close()
     con.close()
