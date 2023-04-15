@@ -1,4 +1,0 @@
-Help on function Connect in module MySQLdb:
-
-CCoonnnneecctt(*args, **kwargs)
-    Factory function for connections.Connection.
