@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """peak module
 Technical interview Preparation
 """
