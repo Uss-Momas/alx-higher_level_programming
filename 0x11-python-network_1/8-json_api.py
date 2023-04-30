@@ -20,5 +20,5 @@ if __name__ == "__main__":
             print('No result')
         else:
             print('[{}] {}'.fomat(json.get('id'), json.get('name')))
-    except requests.exceptions.JSONDecodeError:
+    except Exception:
         print("Not a valid JSON")
