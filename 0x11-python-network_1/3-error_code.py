@@ -5,8 +5,7 @@ sends a request to the URL
 and displays the body of the response (decoded in utf-8)
 """
 
-import urllib
-from urllib import request
+from urllib import request, error
 from sys import argv
 
 if __name__ == '__main__':
@@ -16,5 +15,5 @@ if __name__ == '__main__':
         with request.urlopen(req) as res:
             page = res.read()
             print(str(page, 'utf-8'))
-    except urllib.error.HTTPError as e:
-        print("Error code: " + e.code)
+    except error.HTTPError as e:
+        print("Error code: {}".format(e.code))
