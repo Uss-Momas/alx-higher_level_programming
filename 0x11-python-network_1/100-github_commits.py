@@ -12,8 +12,11 @@ if __name__ == '__main__':
     own_name = argv[2]
     url = 'https://api.github.com/repos/{}/{}/commits'.format(own_name,
                                                               repo_name)
-    r = requests.get(url)
-    for i in range(10):
-        sha = r.json()[i].get('sha')
-        name = r.json()[i].get('commit').get('author').get('name')
-        print("{}: {}".format(sha, name))
+    try:
+        r = requests.get(url)
+        for i in range(0, 10):
+            sha = r.json()[i].get('sha')
+            name = r.json()[i].get('commit').get('author').get('name')
+            print("{}: {}".format(sha, name))
+    except Exception:
+        pass
