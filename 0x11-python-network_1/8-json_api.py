@@ -16,9 +16,9 @@ if __name__ == "__main__":
     res = requests.post(url, data=data)
     try:
         json = res.json()
-        if len(json) == 0:
-            print('No result')
+        if json:
+            print("[{}] {}".fomat(json.get('id'), json.get('name')))
         else:
-            print('[{}] {}'.fomat(json.get('id'), json.get('name')))
+            print("No result")
     except Exception:
         print("Not a valid JSON")
