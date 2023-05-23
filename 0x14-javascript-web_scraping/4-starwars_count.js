@@ -16,4 +16,3 @@ request(url, (err, response, body) => {
   }
   console.log(count);
 });
-
