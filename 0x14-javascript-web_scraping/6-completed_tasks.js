@@ -8,7 +8,7 @@ request(url, (err, response, body) => {
   if (err) console.log(err);
   const json = JSON.parse(body);
   let count = 0;
-  let resp = {};
+  const resp = {};
   for (let i = 1; i <= 10; i++) {
     for (let j = 0; j < json.length; j++) {
       if (json[j].userId === i) {
@@ -20,5 +20,5 @@ request(url, (err, response, body) => {
     resp[i] = count;
     count = 0;
   }
-  console.log(resp)
+  console.log(resp);
 });
