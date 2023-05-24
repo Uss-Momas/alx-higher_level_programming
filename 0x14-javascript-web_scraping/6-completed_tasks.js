@@ -17,7 +17,9 @@ request(url, (err, response, body) => {
         }
       }
     }
-    resp[i] = count;
+    if (count !== 0) {
+      resp[i] = count;
+    }
     count = 0;
   }
   console.log(resp);
