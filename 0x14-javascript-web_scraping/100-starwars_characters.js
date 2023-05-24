@@ -12,8 +12,8 @@ request(url, (err, response, body) => {
     for (let i = 0; i < characters.length; i++) {
       request(characters[i], (error, resp, bd) => {
         if (error) console.log(error);
-        const char_name = JSON.parse(bd).name;
-        console.log(char_name);
+        const characterName = JSON.parse(bd).name;
+        console.log(characterName);
       });
     }
   }
