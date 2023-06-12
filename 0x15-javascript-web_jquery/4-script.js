@@ -2,8 +2,7 @@ $('DIV#toggle_header').on('click', function () {
   if ($('header').hasClass('green')) {
     $('header').removeClass('green');
     $('header').addClass('red');
-  }
-  else {
+  } else {
     $('header').removeClass('red');
     $('header').addClass('green');
   }
