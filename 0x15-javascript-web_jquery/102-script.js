@@ -1,5 +1,4 @@
 window.onload = function () {
-
   $('INPUT#btn_translate').on('click', function () {
     const $lang = $('INPUT#language_code').val();
 
@@ -11,5 +10,4 @@ window.onload = function () {
       }
     });
   });
-
 };

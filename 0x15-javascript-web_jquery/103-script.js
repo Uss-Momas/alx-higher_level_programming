@@ -1,5 +1,4 @@
 window.onload = function () {
-
   $('INPUT#btn_translate').on('click', function () {
     const $lang = $('INPUT#language_code').val();
 
@@ -12,7 +11,7 @@ window.onload = function () {
     });
   });
 
-  $('INPUT#language_code').keypress(function (e){
+  $('INPUT#language_code').keypress(function (e) {
     const $key = e.which;
     if ($key === 13) {
       const $lang = $('INPUT#language_code').val();
@@ -25,5 +24,4 @@ window.onload = function () {
       });
     }
   });
-
 };
